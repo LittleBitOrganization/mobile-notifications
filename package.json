@@ -1,0 +1,12 @@
+{
+  "name": "com.littlebitgames.notificationsmodule",
+  "displayName": "Notifivations Module",
+  "version": "1.0.0",
+  "unity": "2021.1",
+  "unityRelease": "6f1",
+  "description": "The Mobile Notifications package adds support for scheduling local one-time or repeatable notifications on Android and iOS.",
+  "category": "Module",
+  "author": {
+    "name": "LittleBitGames"
+  }
+}
