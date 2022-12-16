@@ -43,13 +43,6 @@ namespace LittleBit.Modules.Notifications.Android
         public string Group { get => DeliveredChannel; set => DeliveredChannel = value; }
 
         /// <inheritdoc />
-        public int? BadgeNumber
-        {
-            get => internalNotification.Number != -1 ? internalNotification.Number : (int?)null;
-            set => internalNotification.Number = value ?? -1;
-        }
-
-        /// <inheritdoc />
         public bool ShouldAutoCancel
         {
             get => InternalNotification.ShouldAutoCancel;

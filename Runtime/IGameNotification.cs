@@ -45,13 +45,7 @@ namespace LittleBit.Modules.Notifications
         /// </summary>
         /// <value>A platform specific string identifier for the notification's group.</value>
         string Group { get; set; }
-
-        /// <summary>
-        /// Gets or sets the badge number for this notification. No badge number will be shown if null.
-        /// </summary>
-        /// <value>The number displayed on the app badge.</value>
-        int? BadgeNumber { get; set; }
-
+        
         /// <summary>
         /// Gets or sets if this notification will be dismissed automatically when the user taps it.
         /// Only available on Android.
