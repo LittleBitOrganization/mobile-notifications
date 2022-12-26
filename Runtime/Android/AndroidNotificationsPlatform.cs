@@ -50,8 +50,6 @@ namespace LittleBit.Modules.Notifications.Android
                     gameNotification.DeliveredChannel);
                 gameNotification.Id = notificationId;
             }
-
-            gameNotification.OnScheduled();
         }
 
         /// <inheritdoc />

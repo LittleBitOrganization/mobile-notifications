@@ -46,23 +46,17 @@ namespace LittleBit.Modules.Notifications
         /// <value>A platform specific string identifier for the notification's group.</value>
         string Group { get; set; }
         
-        /// <summary>
-        /// Gets or sets if this notification will be dismissed automatically when the user taps it.
-        /// Only available on Android.
-        /// </summary>
-        bool ShouldAutoCancel { get; set; }
-
-        /// <summary>
+       /// <summary>
         /// Gets or sets time to deliver the notification.
         /// </summary>
         /// <value>The time of delivery in local time.</value>
         DateTime? DeliveryTime { get; set; }
-
+        
         /// <summary>
-        /// Gets whether this notification has been scheduled.
+        /// Automatic deletion
         /// </summary>
-        /// <value>True if the notification has been scheduled with the underlying operating system.</value>
-        bool Scheduled { get; }
+        /// <value>The time of delivery in local time.</value>
+        bool DeleteAutoReload { get; set; }
 
         /// <summary>
         /// Notification small icon.

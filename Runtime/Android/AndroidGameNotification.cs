@@ -56,13 +56,12 @@ namespace LittleBit.Modules.Notifications.Android
             set => internalNotification.FireTime = value ?? throw new ArgumentNullException(nameof(value));
         }
 
+        public bool DeleteAutoReload { get; set; }
+
         /// <summary>
         /// Gets or sets the channel for this notification.
         /// </summary>
         public string DeliveredChannel { get; set; }
-
-        /// <inheritdoc />
-        public bool Scheduled { get; private set; }
 
         /// <inheritdoc />
         public string SmallIcon { get => InternalNotification.SmallIcon; set => internalNotification.SmallIcon = value; }
@@ -92,14 +91,6 @@ namespace LittleBit.Modules.Notifications.Android
             DeliveredChannel = deliveredChannel;
         }
 
-        /// <summary>
-        /// Set the scheduled flag.
-        /// </summary>
-        internal void OnScheduled()
-        {
-            Assert.IsFalse(Scheduled);
-            Scheduled = true;
-        }
     }
 }
 #endif
