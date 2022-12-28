@@ -47,7 +47,8 @@ namespace LittleBit.Modules.Notifications.iOS
 
         /// <inheritdoc />
         public string Title { get => internalNotification.Title; set => internalNotification.Title = value; }
-
+        /// <inheritdoc />
+        public string Key { get; set; }
         /// <inheritdoc />
         public string Body { get => internalNotification.Body; set => internalNotification.Body = value; }
 

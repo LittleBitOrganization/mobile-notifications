@@ -15,8 +15,13 @@ namespace LittleBit.Modules.Notifications
         /// <para>On some platforms, this might be converted to a string identifier internally.</para>
         /// </remarks>
         /// <value>A unique integer identifier for this notification, or null (on some platforms) if not explicitly set.</value>
-        int? Id { get; set; }
-
+        int Id { get; set; }
+        
+        /// <summary>
+        /// Gets or sets the notification's key.
+        /// </summary>
+        /// <value>Find notifications by key</value>
+        string Key { get; set; }
         /// <summary>
         /// Gets or sets the notification's title.
         /// </summary>

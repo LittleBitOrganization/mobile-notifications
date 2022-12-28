@@ -2,7 +2,7 @@
 
 namespace LittleBit.Modules.Notifications
 {
-    [CreateAssetMenu(fileName = "GameNotificationChannel", menuName = "ScriptableObjects/Game Notifications", order = 1)]
+    [CreateAssetMenu(fileName = "GameNotificationChannel", menuName = "ScriptableObjects/Game Notifications/Channels", order = 1)]
     public class GameNotificationChannel:ScriptableObject
     {
         /// <summary>

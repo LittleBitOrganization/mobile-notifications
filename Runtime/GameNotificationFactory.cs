@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using JetBrains.Annotations;
 
 namespace LittleBit.Modules.Notifications
 {
@@ -23,10 +22,11 @@ namespace LittleBit.Modules.Notifications
                 return null;
             }
             var deliveryTime =timeSpan == null
-                ? DateTime.Now.ToLocalTime() + TimeSpan.FromSeconds(config.DeliveryTime)
+                ? DateTime.Now.ToLocalTime() + TimeSpan.FromSeconds(config.TimeSpan)
                 : DateTime.Now.ToLocalTime() + TimeSpan.FromSeconds(timeSpan.Value); 
             notification.Title = config.Title;
             notification.Body = config.Body;
+            notification.Key = config.Key;
             notification.Group = config.NotificationChannel.Id;
             notification.DeliveryTime = deliveryTime;
             notification.SmallIcon = config.SmallIcon;
@@ -36,13 +36,13 @@ namespace LittleBit.Modules.Notifications
 
             return notification;
         }
-
+        
         public void CancelNotification(int id)
         {
             _gameNotificationService.CancelNotification(id);
         }
 
-        public void CancelAllNotification()
+        public void CancelAllNotifications()
         {
             _gameNotificationService.CancelAllNotification();
         }

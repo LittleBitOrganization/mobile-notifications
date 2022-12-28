@@ -38,18 +38,10 @@ namespace LittleBit.Modules.Notifications.Android
                 throw new ArgumentNullException(nameof(gameNotification));
             }
 
-            if (gameNotification.Id.HasValue)
-            {
-                AndroidNotificationCenter.SendNotificationWithExplicitID(gameNotification.InternalNotification,
-                    gameNotification.DeliveredChannel,
-                    gameNotification.Id.Value);
-            }
-            else
-            {
-                int notificationId = AndroidNotificationCenter.SendNotification(gameNotification.InternalNotification,
-                    gameNotification.DeliveredChannel);
-                gameNotification.Id = notificationId;
-            }
+            int notificationId = AndroidNotificationCenter.SendNotification(gameNotification.InternalNotification,
+                gameNotification.DeliveredChannel);
+            
+            gameNotification.Id = notificationId;
         }
 
         /// <inheritdoc />

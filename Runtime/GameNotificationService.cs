@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using JetBrains.Annotations;
 #if UNITY_ANDROID
 using LittleBit.Modules.Notifications.Android;
 using Unity.Notifications.Android;

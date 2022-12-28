@@ -18,11 +18,13 @@ namespace LittleBit.Modules.Notifications.Android
         /// <summary>
         /// On Android, if the ID isn't explicitly set, it will be generated after it has been scheduled.
         /// </summary>
-        public int? Id { get; set; }
+        public int Id { get; set; }
 
         /// <inheritdoc />
         public string Title { get => InternalNotification.Title; set => internalNotification.Title = value; }
-
+        
+        /// <inheritdoc />
+        public string Key { get; set; }
         /// <inheritdoc />
         public string Body { get => InternalNotification.Text; set => internalNotification.Text = value; }
 
